@@ -63,4 +63,11 @@ while code_given != "Exit code":
 
     if code_given != "Exit code":
         code_list = list(code_given)
-        print(code_list)
+        morse_code = []
+        for char in code_list:
+            try:
+                morse_code.append(MORSE_CODE_DICT[char.upper()])
+            except KeyError:
+                pass
+
+        print(morse_code)
